@@ -1,0 +1,6 @@
+title: My Site
+description: A minimal Jekyll site on GitHub Pages
+theme: minima
+
+# optional, but recommended
+markdown: kramdown
