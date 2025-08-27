@@ -1,0 +1,302 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Custom styles for Mariana Fernandez Interior Design
+
+// Color palette - sophisticated and professional
+$primary-color: #2c3e50;      // Deep blue-grey
+$secondary-color: #8b7355;     // Warm taupe
+$accent-color: #d4af37;        // Elegant gold
+$light-background: #fafafa;    // Off-white
+$dark-text: #2c3e50;
+$light-text: #6c757d;
+
+// Typography enhancements
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.7;
+  color: $dark-text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-weight: 300;
+  color: $primary-color;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid $accent-color;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: $secondary-color;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: $primary-color;
+}
+
+// Navigation styling
+.site-header {
+  background-color: white;
+  border-bottom: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+  .site-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: $primary-color !important;
+    text-decoration: none;
+    
+    &:hover {
+      color: $secondary-color !important;
+      text-decoration: none;
+    }
+  }
+  
+  .page-link {
+    color: $dark-text;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    
+    &:hover {
+      color: $accent-color;
+      text-decoration: none;
+    }
+  }
+}
+
+// Hero section styling
+.page-content {
+  padding-top: 2rem;
+}
+
+// Professional button styling
+.btn-primary {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    transform: translateY(-2px);
+  }
+}
+
+// Gallery styling
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: $light-background;
+  border-left: 4px solid $accent-color;
+  
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  // Placeholder for when images aren't available yet
+  &::before {
+    content: "📸 Photo gallery - Images will be added here";
+    display: block;
+    padding: 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 4px;
+    color: $light-text;
+    font-style: italic;
+    grid-column: 1 / -1;
+  }
+}
+
+// Services and features styling
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.service-card {
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  
+  h3 {
+    color: $secondary-color;
+    margin-top: 0;
+  }
+}
+
+// Professional lists
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+ul li strong {
+  color: $primary-color;
+}
+
+// Contact page styling
+.contact-info {
+  background-color: $light-background;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+// Footer styling
+.site-footer {
+  background-color: $primary-color;
+  color: white;
+  padding: 2rem 0;
+  
+  .footer-heading {
+    color: white;
+  }
+  
+  .contact-list a,
+  .social-media-list a {
+    color: #bbb;
+    
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+// Responsive design
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .site-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-card {
+    padding: 1.5rem;
+  }
+}
+
+// Print styles
+@media print {
+  .site-header,
+  .site-footer,
+  .page-navigation {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+}
+
+// Professional blockquote styling
+blockquote {
+  border-left: 4px solid $accent-color;
+  background-color: $light-background;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: $dark-text;
+}
+
+// Link styling
+a {
+  color: $secondary-color;
+  
+  &:hover {
+    color: $accent-color;
+    text-decoration: underline;
+  }
+}
+
+// Table styling for any data presentation
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  th {
+    background-color: $light-background;
+    font-weight: 600;
+    color: $primary-color;
+  }
+}
+
+// Professional emphasis
+em {
+  color: $secondary-color;
+  font-style: italic;
+}
+
+strong {
+  color: $primary-color;
+  font-weight: 600;
+}
