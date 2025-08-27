@@ -1,6 +1,31 @@
-title: My Site
-description: A minimal Jekyll site on GitHub Pages
+title: Mariana Fernandez Interior Design
+description: Professional interior design services specializing in commercial showrooms and luxury spaces
 theme: minima
+url: "https://mafelasco.github.io"
+baseurl: ""
 
-# optional, but recommended
+# Build settings
 markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Author/Owner info
+author:
+  name: Mariana Fernandez
+  email: info@marianafernandez.design
+
+# Navigation
+header_pages:
+  - index.md
+  - about.md
+  - portfolio.md
+  - services.md
+  - contact.md
+
+# SEO settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Google Analytics (add your tracking ID when available)
+# google_analytics: UA-XXXXXXXXX-X
